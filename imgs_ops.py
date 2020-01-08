@@ -53,7 +53,8 @@ class Images():
 
         kernel = np.ones((2,2),np.uint8)
 
-        return cv2.dilate(gauss_highpass, kernel, iterations = 1)
+        #return cv2.dilate(gauss_highpass, kernel, iterations = 1)
+        return gauss_highpass
 
     def dep_(self, img):
         r, c = img.shape
