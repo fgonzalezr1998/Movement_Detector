@@ -53,10 +53,7 @@ class Images():
 
         kernel = np.ones((2,2),np.uint8)
 
-        #return cv2.erode(gauss_highpass, kernel)
         return cv2.dilate(gauss_highpass, kernel, iterations = 1)
-        #return cv2.morphologyEx(gauss_highpass, cv2.MORPH_OPEN, kernel)
-        #return gauss_highpass;
 
     def dep_(self, img):
         r, c = img.shape
